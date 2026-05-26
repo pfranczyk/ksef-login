@@ -1,0 +1,66 @@
+{
+  "name": "@pfranczyk/ksef-login",
+  "version": "0.1.0",
+  "description": "KSeF authentication library — obtain and refresh JWT tokens",
+  "license": "MIT",
+  "author": "Paweł Franczyk",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pfranczyk/ksef-login.git"
+  },
+  "homepage": "https://github.com/pfranczyk/ksef-login#readme",
+  "bugs": {
+    "url": "https://github.com/pfranczyk/ksef-login/issues"
+  },
+  "keywords": [
+    "ksef",
+    "authentication",
+    "auth",
+    "jwt",
+    "poland",
+    "e-faktura",
+    "krajowy-system-e-faktur",
+    "rsa-oaep",
+    "node"
+  ],
+  "type": "module",
+  "main": "./dist/cjs/index.cjs",
+  "module": "./dist/esm/index.js",
+  "types": "./dist/types/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/types/index.d.ts",
+      "import": "./dist/esm/index.js",
+      "require": "./dist/cjs/index.cjs"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE",
+    "CHANGELOG.md"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "tsup",
+    "check": "biome check ./src",
+    "check:fix": "biome check --write ./src",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "typecheck": "tsc --noEmit",
+    "prepublishOnly": "npm run check && npm run typecheck && npm run test && npm run build"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^2.4.15",
+    "@types/node": "^25.9.0",
+    "@vitest/coverage-v8": "^4.1.6",
+    "tsup": "^8.5.1",
+    "typescript": "^6.0.3",
+    "vitest": "^4.1.6"
+  }
+}
