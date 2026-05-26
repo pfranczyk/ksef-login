@@ -1,5 +1,5 @@
 {
-  "name": "@pfranczyk/ksef-login",
+  "name": "@logrox/ksef-login",
   "version": "0.1.0",
   "description": "KSeF authentication library — obtain and refresh JWT tokens",
   "license": "MIT",

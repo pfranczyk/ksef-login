@@ -1,8 +1,8 @@
-# @pfranczyk/ksef-login
+# @logrox/ksef-login
 
 A lightweight, zero-dependency Node.js library for authenticating with the Polish **KSeF** (Krajowy System e-Faktur) API. Obtain and refresh JWT tokens using the official 7-step KSeF authentication flow.
 
-[![npm version](https://img.shields.io/npm/v/@pfranczyk/ksef-login)](https://www.npmjs.com/package/@pfranczyk/ksef-login)
+[![npm version](https://img.shields.io/npm/v/@logrox/ksef-login)](https://www.npmjs.com/package/@logrox/ksef-login)
 [![Node.js ≥ 20](https://img.shields.io/badge/node-%3E%3D20-brightgreen)](https://nodejs.org)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
@@ -31,7 +31,7 @@ A lightweight, zero-dependency Node.js library for authenticating with the Polis
 ## Installation
 
 ```bash
-npm install @pfranczyk/ksef-login
+npm install @logrox/ksef-login
 ```
 
 ---
@@ -39,7 +39,7 @@ npm install @pfranczyk/ksef-login
 ## Quick Start
 
 ```typescript
-import { KSeFAuth } from "@pfranczyk/ksef-login";
+import { KSeFAuth } from "@logrox/ksef-login";
 
 const auth = new KSeFAuth({
   baseUrl: "https://ksef-demo.mf.gov.pl/api",
@@ -262,7 +262,7 @@ import {
   KSeFChallengeError,
   KSeFTokenError,
   KSeFNetworkError,
-} from "@pfranczyk/ksef-login";
+} from "@logrox/ksef-login";
 ```
 
 | Class | Thrown when |
@@ -274,7 +274,7 @@ import {
 | `KSeFNetworkError` | HTTP error, timeout, or JSON parse failure |
 
 ```typescript
-import { KSeFAuthError, KSeFPublicKeyError, KSeFNetworkError } from "@pfranczyk/ksef-login";
+import { KSeFAuthError, KSeFPublicKeyError, KSeFNetworkError } from "@logrox/ksef-login";
 
 try {
   const result = await auth.login({ tokens });
@@ -345,7 +345,7 @@ import type {
   LoginResult,
   RefreshResult,
   ILogger,
-} from "@pfranczyk/ksef-login";
+} from "@logrox/ksef-login";
 ```
 
 ---
